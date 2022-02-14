@@ -16,13 +16,16 @@ lives = 6
 from hangman_art import logo
 print(logo)
 
-#Testing code
-print(f'Pssst, the solution is {chosen_word}.')
+# Testing code
+# print(f'Pssst, the solution is {chosen_word}.')
 
 #Create blanks
 display = []
 for _ in range(word_length):
     display += "_"
+
+
+print(f"\nHere's the missing word {' '.join(display)}")
 
 while not end_of_game:
     guess = input("Guess a letter: ").lower()

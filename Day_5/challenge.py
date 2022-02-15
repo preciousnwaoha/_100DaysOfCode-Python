@@ -68,11 +68,17 @@ reptiles = ["snake", "turtle", "crocodile", "dinasour"]
 
 def longest_lengths(*arrs):
     word_lens_max = []
+    new_word_arrs = []
     for word_arr in arrs:
-        x = [len(word) for word in word_arr]
+        x = []
+        for word in word_arr:
+            x.append(len(word))
         word_lens_max.append(max(x))
-        for num in range(len(word_arr)):
-            print(word_arr[num])
+        for word in word_arr:
+            x.append(len(word))
+        
+        # for num in range(len(word_arr)):
+        #     print(f"\n{word_arr[num]} +")
     print(word_lens_max)
     
         

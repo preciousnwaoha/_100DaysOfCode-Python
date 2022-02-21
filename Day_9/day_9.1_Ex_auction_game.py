@@ -1,6 +1,6 @@
 from art import logo
 
-from replit import clear # will only work in replit
+# from replit import clear # will only work in replit
 #HINT: You can call clear() to clear the output in the console.
 
 print(logo)
@@ -30,7 +30,7 @@ def start_auction():
     if anyone == "no":
       more_bidders = False
     if anyone == "yes":
-      clear() # only works in replit
+      # clear() # only works in replit
   max_bidder = who_bid_max()
   print(f"{max_bidder} won the auction, sold for ${bid_data[max_bidder]}")
     

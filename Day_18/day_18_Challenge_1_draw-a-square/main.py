@@ -11,7 +11,7 @@ def random_color():
 timmy_the_turtle = Turtle()
 timmy_the_turtle.shape("turtle")
 timmy_the_turtle.pensize(3)
-timmy_the_turtle.d
+
 
 timmy_the_turtle.color(random_color())
 

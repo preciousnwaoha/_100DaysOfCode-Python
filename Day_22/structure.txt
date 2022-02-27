@@ -1,0 +1,13 @@
+1. Create Players
+
+2. Add Player Movement (UP/DOWN)
+
+3. Draw Dimacaton line
+
+4. Create Ball
+
+5. Ball-Wall Collision
+
+5. Watch Player-Ball Collision
+
+6. Score for each player

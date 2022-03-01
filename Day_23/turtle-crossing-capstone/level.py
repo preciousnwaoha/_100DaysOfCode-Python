@@ -18,6 +18,10 @@ class Level(Turtle):
     def update_level(self):
         self.write(f"Level: {self.level}", align=ALIGNMENT, font=FONT)
 
+    def game_over(self):
+        self.goto(0,0)
+        self.write(f"GAME OVER", align=ALIGNMENT, font=FONT)
+
     
     def increase_level(self):
         self.level += 1

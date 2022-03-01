@@ -2,6 +2,8 @@ from turtle import Turtle
 
 import shelve
 
+import shelve
+
 
 ALIGNMENT = "center"
 FONT = ("Courier", 16, "bold")
@@ -12,14 +14,14 @@ class HighScore(Turtle):
     def __init__(self, position):
         super().__init__()
         # High score should never be reset.
-        d = shelve.open('pong_game_high_score')
+        d = shelve.open('turtle_crossing_high_score')
         if d:
             self.high_score = d['high_score']
         else:
-            d['high_score'] = 0
+            d['high_score'] = 0 
             self.high_score = d['high_score']
         d.close()
-        self.color("white")
+        self.color("black")
         self.penup()
         self.goto(position)
         self.hideturtle()
@@ -30,11 +32,11 @@ class HighScore(Turtle):
         self.write(f"HighScore: {self.high_score}", align=ALIGNMENT, font=FONT)
 
     
-    def check_high_score(self, sb):
+    def check_high_score(self, level):
         """Check to see if there's a new high score."""
-        if sb.score > self.high_score:
-            d = shelve.open('pong_game_high_score')
-            d['high_score'] = sb.score
+        if level.level > self.high_score:
+            d = shelve.open('turtle_crossing_high_score')
+            d['high_score'] = level.level
             self.high_score = d['high_score']
             self.clear()
             self.update_high_score()

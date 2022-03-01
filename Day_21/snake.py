@@ -19,8 +19,8 @@ class Snake:
             self.add_segment(position)
 
     def add_segment(self, position):
-        new_segment = Turtle("square")
-        new_segment.color("white")
+        new_segment = Turtle("circle")
+        new_segment.color((50,50,50))
         new_segment.penup()
         new_segment.goto(position)
         self.segments.append(new_segment)
@@ -50,3 +50,22 @@ class Snake:
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
+
+    
+    def reappear_x(self):
+        position_x = self.head.xcor() * -1
+        position_y = self.head.ycor()
+        self.head.goto(position_x, position_y)
+
+    def reappear_y(self):
+        position_x = self.head.xcor()
+        position_y = self.head.ycor() * -1
+        self.head.goto(position_x, position_y)
+
+
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000, 1000)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]

@@ -19,7 +19,7 @@ for (index, row) in student_data_frame.iterrows():
 
 # Keyword Method with iterrows()
 looped_sdf = {row.student:row.score for (index, row) in student_data_frame.iterrows()}
-print(looped_sdf)
+# print(looped_sdf)
 
 #TODO 1. Create a dictionary in this format:
 nato = pandas.read_csv("nato_phonetic_alphabet.csv")
